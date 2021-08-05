@@ -35,6 +35,30 @@ const scopes = [
     "user-top-read",
     "user-modify-playback-state",
 ]
+
+
+
+/*=================Token =========================================*
+Here, we made a new function named getTokenFromUrl which will basically extract the Access Token from the URL once we have it.
+ Now let’s check in the App component so that whenever a token is sent, 
+ we can decide if we want to show the Player or the Login screen. So, open App.js and use the following code 
+ and we will run through it.
+
+*=======================================================================*/
+export const getTokenFromUrl = () => {
+    return window.location.hash
+        .substring(1)
+        .split("&")
+        .reduce((intial,item) =>{
+            let parts = item.split("=");
+            intial[parts[0]] = decodeURIComponent(parts[1]);
+            return intial;
+
+        },{});
+
+};
+
+
 /*=================loginUrl =========================================*
 The loginUrl is the final URL which needs to be called in order to authorize an user 
 for our Spotify Clone app. 

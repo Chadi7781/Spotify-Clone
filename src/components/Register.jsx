@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/Login.css'
+import './css/Register.css'
 
 import {loginUrl} from '../config/spotify.jsx'
 function Login() {
@@ -14,14 +14,15 @@ function Login() {
         <form className="form">
         <input className="form-input" type="email" placeholder="Enter your Email "></input>
         <input className="form-input" type="password" placeholder="Enter your Password "></input>
-        <button type="button" className="login-with-btn" >Sign in </button>
+        <input className="form-input" type="password" placeholder="Confirm your Password "></input>
+        <button type="button" className="login-with-btn" >Sign Up </button>
 
         <br></br>
         <button type="button" className="login-with-google-btn" >Sign in with Google
 </button>
         </form>
         <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
-        <a href="#" className="have-account">I don't Have an account</a>
+        <a href="#" className="have-account">I already Have an account</a>
 
       </div>
       
