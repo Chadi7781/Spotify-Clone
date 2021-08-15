@@ -27,7 +27,7 @@
 }
 
 .login > .form > .form-input {
-  border-radius: 10px;
+  border-radius: 0;
   padding: 20px;
   margin: auto;
   place-items: center;
@@ -38,10 +38,18 @@
   left: 37%;
   right: 50%;
   bottom: 50%;
+  font-weight: 600;
   align-items: center;
   width: 50vh;
   display: flex;
-  text-align: center;
+}
+
+.login-with-btn:hover {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  transition: transform 450ms;
+  animation-duration: 2ms;
 }
 
 .login-with-btn {
